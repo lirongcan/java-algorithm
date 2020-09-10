@@ -30,7 +30,7 @@ class SimpleBinaryTree{
 }
 
 //分离叶子和中间节点的类
-class SimpleSeperateLeafAndIntervalNodeTree{
+class SimpleSeperateLeafAndInternalNodeTree{
     abstract static class BinaryNode{
         abstract boolean ifLeaf();
         int key,value;
@@ -46,15 +46,15 @@ class SimpleSeperateLeafAndIntervalNodeTree{
             return true;
         }
     }
-    static class IntervalNode extends BinaryNode{
+    static class InternalNode extends BinaryNode{
         private BinaryNode left,right;
-        IntervalNode(int k,int v){
+        InternalNode(int k, int v){
             key=k;
             value=v;
             left=null;
             right=null;
         }
-        IntervalNode(){left=null;right=null;}
+        InternalNode(){left=null;right=null;}
         BinaryNode left(){return left;}
         BinaryNode right(){return right;}
         void setLeft(BinaryNode l){left=l;}
